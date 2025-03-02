@@ -47,10 +47,6 @@ jobs:
       run: >
         /build/venv/bin/cross-python -m pip config set global.extra-index-url
         https://wpilib.jfrog.io/artifactory/api/pypi/wpilib-python-release-2025/simple
-  
-    - shell: bash
-      name: Allow pip to install development versions
-      run: /build/venv/bin/cross-python -m pip config set global.pre true
 
     - shell: bash
       name: Install meson cross-file
