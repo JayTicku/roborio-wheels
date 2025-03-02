@@ -93,6 +93,7 @@ build_pip_requirements = [
     "numpy>=2.0",
 ]
 pip_args = [
+    "--pre",
     "https://github.com/shapely/shapely/archive/refs/tags/2.1.0.dev0.tar.gz"
     # "--index-url=https://pypi.anaconda.org/scientific-python-nightly-wheels/simple",
     # "--extra-index-url=https://pypi.anaconda.org/scientific-python-nightly-wheels/simple",
