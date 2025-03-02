@@ -92,6 +92,10 @@ build_pip_requirements = [
     "Cython>=3.0",
     "numpy",
 ]
+pip_args = [
+    "--pre",
+    "-i https://pypi.anaconda.org/scientific-python-nightly-wheels/simple"
+]
 pre_script = "scripts/build_geos.sh"
 
 [packages.shapely.environment]
