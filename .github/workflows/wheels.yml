@@ -46,8 +46,8 @@ jobs:
       name: Set extra index urls in pip
       run: |
         /build/venv/bin/cross-python -m pip config set global.extra-index-url \
-          https://wpilib.jfrog.io/artifactory/api/pypi/wpilib-python-release-2025/simple \
-            https://pypi.anaconda.org/scientific-python-nightly-wheels/simple
+          https://pypi.anaconda.org/scientific-python-nightly-wheels/simple
+#          https://wpilib.jfrog.io/artifactory/api/pypi/wpilib-python-release-2025/simple \
         
     - shell: bash
       name: Install meson cross-file
