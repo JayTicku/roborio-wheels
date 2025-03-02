@@ -58,9 +58,9 @@ jobs:
       name: Install script requirements
       run: |
         /build/venv/bin/cross-python -m \
-          pip --pre -i https://pypi.anaconda.org/scientific-python-nightly-wheels/simple --disable-pip-version-check install -r requirements.txt
+          pip --disable-pip-version-check install -r requirements.txt
         /build/venv/bin/build-python -m \
-          pip --pre -i https://pypi.anaconda.org/scientific-python-nightly-wheels/simple --disable-pip-version-check install -r requirements.txt
+          pip --disable-pip-version-check install -r requirements.txt
     
     - shell: bash
       name: Determine if ${{ matrix.package }} should be built
