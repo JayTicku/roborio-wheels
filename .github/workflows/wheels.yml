@@ -44,7 +44,9 @@ jobs:
 
     - shell: bash
       name: Allow pre-releases to be installed
-      run: /build/venv/bin/cross-python -m pip config set global.pre true
+      run: |
+        /build/venv/bin/cross-python -m pip config set global.pre true
+        /build/venv/bin/cross-python -m pip config set global.index-strategy unsafe-best-match
 
     - shell: bash
       name: Set extra index urls in pip
