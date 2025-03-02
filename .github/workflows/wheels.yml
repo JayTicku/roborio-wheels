@@ -42,6 +42,7 @@ jobs:
 
     # temporary fix
     - run: /build/venv/bin/cross-python -m pip config set global.extra-index-url https://wpilib.jfrog.io/artifactory/api/pypi/wpilib-python-release-2025/simple
+    - run: /build/venv/bin/cross-python -m pip config set global.extra-index-url https://pypi.anaconda.org/scientific-python-nightly-wheels/simple
 
     - shell: bash
       name: install meson cross-file
