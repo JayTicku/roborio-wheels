@@ -41,10 +41,7 @@ jobs:
     - run: apt-get update && apt-get install -y bzip2
 
     # temporary fix
-    - run: >
-      /build/venv/bin/cross-python -m pip config set global.extra-index-url
-      https://wpilib.jfrog.io/artifactory/api/pypi/wpilib-python-release-2025/simple
-      https://pypi.anaconda.org/scientific-python-nightly-wheels/simple
+    - run: /build/venv/bin/cross-python -m pip config set global.extra-index-url https://wpilib.jfrog.io/artifactory/api/pypi/wpilib-python-release-2025/simple https://pypi.anaconda.org/scientific-python-nightly-wheels/simple
 
     - shell: bash
       name: install meson cross-file
