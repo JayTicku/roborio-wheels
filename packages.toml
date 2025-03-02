@@ -86,12 +86,17 @@ build_pip_requirements = [
 # version = "1.5.3"
 
 [packages.shapely]
-version = "1.8.5"
+version = "2.1.0"
 build_pip_requirements = [
     "setuptools",
     "Cython>=3.0",
     "numpy",
 ]
+pip_args = [
+    "--pre",
+    "--upgrade",
+    "--extra-index-url https://pypi.anaconda.org/scientific-python-nightly-wheels/simple"
+] 
 pre_script = "scripts/build_geos.sh"
 
 [packages.shapely.environment]
