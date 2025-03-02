@@ -88,14 +88,15 @@ build_pip_requirements = [
 [packages.shapely]
 version = "2.1.*"
 build_pip_requirements = [
-    "setuptools",
+    # "setuptools",
     "Cython>=3.0",
-    "numpy",
+    "numpy>=2.0",
 ]
 pip_args = [
-    "--index-url=https://pypi.anaconda.org/scientific-python-nightly-wheels/simple",
-    "--extra-index-url=https://pypi.anaconda.org/scientific-python-nightly-wheels/simple",
-#    "--no-binary=shapely"
+    "https://github.com/shapely/shapely/archive/refs/tags/2.1.0.dev0.tar.gz"
+    # "--index-url=https://pypi.anaconda.org/scientific-python-nightly-wheels/simple",
+    # "--extra-index-url=https://pypi.anaconda.org/scientific-python-nightly-wheels/simple",
+    # "--no-binary=shapely"
 ]
 pre_script = "scripts/build_geos.sh"
 
