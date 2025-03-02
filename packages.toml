@@ -93,7 +93,6 @@ build_pip_requirements = [
     "numpy",
 ]
 pip_args = [
-    "--no-binary",
     "--pre",
     "--extra-index-url https://pypi.anaconda.org/scientific-python-nightly-wheels/simple"
 ] 
