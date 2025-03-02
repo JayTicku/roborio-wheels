@@ -95,7 +95,7 @@ build_pip_requirements = [
 pip_args = [
     "--index-url=https://pypi.anaconda.org/scientific-python-nightly-wheels/simple",
     "--extra-index-url=https://pypi.anaconda.org/scientific-python-nightly-wheels/simple",
-    "--no-binary=shapely"
+#    "--no-binary=shapely"
 ]
 pre_script = "scripts/build_geos.sh"
 
