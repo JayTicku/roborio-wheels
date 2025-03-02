@@ -43,17 +43,10 @@ jobs:
       run: apt-get update && apt-get install -y bzip2
 
     - shell: bash
-      name: Allow pre-releases to be installed
-      run: |
-        /build/venv/bin/cross-python -m pip config set global.pre true
-        /build/venv/bin/cross-python -m pip config set global.index-strategy unsafe-best-match
-
-    - shell: bash
-      name: Set extra index urls in pip
+      name: Set extra index url in pip
       run: >
         /build/venv/bin/cross-python -m pip config set global.index-url
-        https://pypi.anaconda.org/scientific-python-nightly-wheels/simple
-#          https://wpilib.jfrog.io/artifactory/api/pypi/wpilib-python-release-2025/simple \
+        https://wpilib.jfrog.io/artifactory/api/pypi/wpilib-python-release-2025/simple
        
     - shell: bash
       name: Install meson cross-file
@@ -65,9 +58,9 @@ jobs:
       name: Install script requirements
       run: |
         /build/venv/bin/cross-python -m \
-          pip --disable-pip-version-check install -r requirements.txt
+          pip --pre -i https://pypi.anaconda.org/scientific-python-nightly-wheels/simple --disable-pip-version-check install -r requirements.txt
         /build/venv/bin/build-python -m \
-          pip --disable-pip-version-check install -r requirements.txt
+          pip --pre -i https://pypi.anaconda.org/scientific-python-nightly-wheels/simple --disable-pip-version-check install -r requirements.txt
     
     - shell: bash
       name: Determine if ${{ matrix.package }} should be built
