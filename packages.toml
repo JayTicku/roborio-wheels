@@ -86,7 +86,7 @@ build_pip_requirements = [
 # version = "1.5.3"
 
 [packages.shapely]
-#version = "2.1.0.dev0+178.g7ff99c8"
+version = "2.1.0.dev0+178"
 build_pip_requirements = [
     "setuptools",
     "Cython>=3.0",
